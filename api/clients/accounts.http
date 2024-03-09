@@ -9,3 +9,14 @@ Content-Type: application/json
     "email": "viniciusitalo@gmail.com",
     "password": "12345678"
 }
+
+###
+
+# @name login
+POST {{baseUrl}}/sessions
+Content-Type: application/json
+
+{
+    "email": "viniciusitalo@gmail.com",
+    "password": "12345678"
+}
