@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Poppins } from 'next/font/google';
+import { Sora } from 'next/font/google';
 import "./globals.css";
+import { Header, Nav, TopLeftImage } from "@/components";
 
-const poppins = Poppins({
+const sora = Sora({
   subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-poppins',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900']
+  variable: '--font-sora',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800']
 });
 
 export const metadata: Metadata = {
@@ -20,7 +20,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={poppins.className}>{children}</body>
+      <body className={`${sora.className} page bg-site text-white bg-cover bg-no-repeat font-sora relative`}>
+        <TopLeftImage />
+        <Nav />
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
